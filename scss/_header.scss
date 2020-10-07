@@ -1,0 +1,127 @@
+.header {
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	padding: 20px;
+	width: 320px;
+	height: 100%;
+	background-color: #eceff0;
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+	transition: 0.2;
+	opacity: 0;
+	visibility: hidden;
+	overflow: auto;
+	&:target {
+		top: 0;
+		opacity: 1;
+		visibility: visible;
+		transition: 0.2;
+		left: 0;
+	}
+}
+.close {
+	z-index: 3;
+	font-size: 63px;
+	font-weight: 700;
+	position: absolute;
+	top: 10px;
+	line-height: 1;
+	right: 10px;
+	width: 48px;
+	height: 48px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: #572671;
+	transition: 0.2s;
+	&:hover {
+		color: #3aaf38;
+		box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+		transition: 0.2s;
+		cursor: pointer;
+	}
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+.open {
+	z-index: 1;
+	font-size: 63px;
+	font-weight: 700;
+	position: fixed;
+	top: 10px;
+	line-height: 1;
+	left: 10px;
+	width: 48px;
+	height: 48px;
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: #572671;
+	transition: 0.2s;
+	&:hover {
+		color: #3aaf38;
+		box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+		transition: 0.2s;
+		cursor: pointer;
+	}
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	span {
+		font-weight: 700;
+		margin-right: 20px;
+	}
+	&__item {
+		display: flex;
+		margin-bottom: 20px;
+		flex-direction: column;
+		font-size: 22px;
+		& span {
+			margin-bottom: 20px;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 100%;
+		padding: 0 0 0 10px;
+		font-weight: 700;
+		font-size: 20px;
+
+		a {
+			margin-left: 10px;
+		}
+		&_tr {
+			li {
+				margin-bottom: 10px;
+				display: flex;
+				align-items: center;
+			}
+		}
+		&_lec {
+			li {
+				margin-bottom: 10px;
+
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
